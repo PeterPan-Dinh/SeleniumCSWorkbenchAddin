@@ -1,0 +1,294 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--<TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>-->
+	<TargetFramework>net6.0-windows</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Config\Config.xml" />
+    <None Remove="Core\WebDrivers\chromedriver.exe" />
+    <None Remove="Core\WebDrivers\geckodriver.exe" />
+    <None Remove="Core\WebDrivers\msedgedriver.exe" />
+    <None Remove="Reports\ExtentReportConfig.xml" />
+    <None Remove="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Staging.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Config\Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\WebDrivers\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\WebDrivers\geckodriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\WebDrivers\msedgedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\ExtentReportConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtentReports" Version="5.0.4" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.70.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Include="NUnit" Version="4.3.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RestSharp.Serializers.Utf8Json" Version="106.15.0" />
+    <PackageReference Include="Selenium.Support" Version="4.31.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.31.0" />
+    <PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.4" />
+    <PackageReference Include="System.Text.Json" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <HintPath>C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FADAddInApi\Documents\CreateFileMappingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\DxDReportOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\DxDReportStagingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\GetFileMappingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\GetShareClass.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\GetShareClassOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePrivateReportCambridgeOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePrivateReportCambridgeStagingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePrivateReportManagerOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePrivateReportManagerStagingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePublicReportOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePublicReportSolovisOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePublicReportSolovisSandboxOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\SinglePublicReportStagingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="FADAddInApi\Documents\UpdateFileMappingOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\TestResults.txt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\CSV files\cashflow_information.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\CSV files\deal_information.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\CSV files\fund_information.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\CSV files\Upload_Exposure_2rows.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\CSV files\Upload_FundAUM_2rows.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\CSV files\Upload_FundReturns_2rows.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Empty files\Excel_file.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Empty files\txt_file.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Empty files\Word_file.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\Book_Citadel.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_PEAR_Sandbox_WM_Perc.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_PEAR_Staging_WM_Perc.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Sandbox_WM_Custom.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Sandbox_WM_Equal.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Sandbox_WM_Perc.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Staging_WM_Custom.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Staging_WM_Equal.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\DxDOutputReport_Baseline\Book_VGO_Staging_WM_Perc.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePrivateReport_Baseline\Book_GSR_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePrivateReport_Baseline\Book_GSR_Sandbox.xlsx.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePrivateReport_Baseline\Book_GSR_Staging.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePrivateReport_Baseline\Book_GSR_Staging.xlsx.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePrivateReport_Baseline\Book_VGO_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePrivateReport_Baseline\Book_VGO_Staging.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Amber_AEvestment_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Amber_AEvestment_Staging.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_GoldenChinaManual.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_GoldenChinaManual_Input.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_GoldenChinaManual_Input_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_GoldenChinaManual_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_John2035_TEvestment_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_John2035_TEvestment_Staging.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Laurion.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Laurion_Staging.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Melvin.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\Book_Melvin_ErrorFundInfo.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\Book_Melvin_ErrorFundInfo_Input.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Melvin_Input_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Melvin_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_OasisJapan.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\Book_OasisJapan_ErrorFundInfo.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\Book_OasisJapan_ErrorFundInfo_Input.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_Melvin_Input.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_OasisJapan_Input.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_PreludeManual.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_PreludeManual_Input.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_PreludeManual_Input_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Excel files\SinglePublicReport_Baseline\Book_PreludeManual_Sandbox.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Manifest files\manifest_Sandbox.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tests\Documents\Manifest files\manifest_Staging.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Tests\Documents\Empty files\" />
+    <Folder Include="Tests\Documents\Excel files\DxDOutputReport_Baseline\" />
+    <Folder Include="Tests\Documents\Excel files\SinglePrivateReport_Baseline\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<config>
+	<!-- Setup environment for running test-->
+	<browser>chrome</browser>
+
+	<!--Collection of testing sites and credentials-->
+
+	<!--Lab (dev-1)-->
+	<!--<site></site>
+	<instanceName></instanceName>
+	<iconImg></iconImg>
+	<fundAlbourne managerName="" fundName=""/>
+	<fundManual managerName="" fundName=""/>
+	<manifestFile file=""/>-->
+
+	<!--QA (dev-2)-->
+	<site></site>
+	<instanceName></instanceName>
+	<iconImg></iconImg>
+	<fundAlbourne managerName="" fundName=""/>
+	<fundManual managerName="" fundName=""/>
+	<manifestFile file=""/>
+	<webApis datalakeApi="" WorkbenchApi=""/>
+	<tokens bearerToken=""
+			msalIdtoken="not require"/>
+
+	<!--UAT (Staging)-->
+	<!--<site></site>
+	<instanceName></instanceName>
+	<iconImg></iconImg>
+	<fundAlbourne managerName="" fundName=""/>
+	<fundManual managerName="" fundName=""/>
+	<manifestFile file=""/>
+	<webApis datalakeApi="" WorkbenchApi=""/>
+	<tokens bearerToken=""
+			msalIdtoken="not require"/>-->
+
+	<account>
+		<valid email="" password="" username="" usernameAddin=""/>
+		<invalid email="abc@123.456" password="abc"/>
+		<msal clientId=""
+			  tenantId=""
+			  redirectUri=""/>
+		<excelOnline url=""
+					 downloadedBook=""/>
+		<!--<excelOnline url=""
+					 downloadedBook=""/>-->
+	</account>
+
+	<!--Firefox directory for 32 bit or 64 bit. (Currently, Using gecko 64 bit)-->
+	<gecko path="Core\WebDrivers" />
+
+	<!-- Database information for test report-->
+	<!--<database>
+		<connection>Server=.;Initial Catalog=GendKSAutomation;Integrated Security=true;Trusted_Connection=Yes;</connection>
+		<functionality>SELECT * FROM ks_auto.FunctionalityTestingReports</functionality>
+		<performance>SELECT * FROM ks_auto.PerformanceTestingReports</performance>
+	</database>-->
+
+	<!-- Screenshot directory and format setting -->
+	<!--<screenshot>
+		<screenshotPath>D://GendKSAutomation/Result/Screenshots/</screenshotPath>
+		<screenshotFormat>.jpeg</screenshotFormat>
+	</screenshot>-->
+
+</config>

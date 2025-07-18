@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumGendKS", "SeleniumGendKS\SeleniumGendKS.csproj", "{DC2B0C8B-A590-4DAB-BAD7-A7ED4CC6EE7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9BF0211D-2872-45C2-BF34-D40993AEC4B2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC2B0C8B-A590-4DAB-BAD7-A7ED4CC6EE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2B0C8B-A590-4DAB-BAD7-A7ED4CC6EE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2B0C8B-A590-4DAB-BAD7-A7ED4CC6EE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2B0C8B-A590-4DAB-BAD7-A7ED4CC6EE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76B38B0E-C9FE-42B5-B530-B87A2E75460A}
+	EndGlobalSection
+EndGlobal
